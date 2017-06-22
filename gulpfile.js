@@ -31,13 +31,13 @@ gulp.task('sass', () => {
 
 // looks for errors and warnings and compiles .js to es5
 gulp.task('js', () => {
-  return gulp.src('es6/script.js')
+  return gulp.src('dev/es6/script.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(babel({
       presets: ['es2015']
     }))
-    .pipe(gulp.dest('dev/scripts/script.js'));
+    .pipe(gulp.dest('dev/scripts'));
 });
 
 // reloads browser-sync on change of html, css, js files 
@@ -50,7 +50,7 @@ gulp.task('browse', ['sass'], () => {
   });
 
   gulp.watch('dev/styles/*.sass', ['sass']);
-  gulp.watch('dev/es6/*.js'), ['js'];
+  gulp.watch('dev/es6/*.js', ['js']);
   browserSync.watch(['dev/*.html', 'dev/styles/*.css', 'scripts/*.js']).on('change', browserSync.reload);
 });
 

@@ -1,9 +1,6 @@
+@charset "UTF-8";
 @import url(glyphicon.css);
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
 
 a {
@@ -11,10 +8,6 @@ a {
   a:hover {
     text-decoration: none;
     color: #307668; }
-
-span.b {
-  font-weight: bold;
-  font-size: larger; }
 
 .cap {
   text-transform: uppercase; }
@@ -58,8 +51,8 @@ navbar {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     -ms-flex-item-align: center;
     align-self: center; }
     .navbar-container .nav .nav-options {
@@ -69,46 +62,31 @@ navbar {
 #portfolio-templates {
   position: relative;
   top: 60px;
-  padding: 80px 0; }
-  #portfolio-templates .row1 {
+  padding: 60px 0; }
+  #portfolio-templates img {
+    margin: 0 10px; }
+  #portfolio-templates .row1, #portfolio-templates .row2, #portfolio-templates .row3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 64%;
-    margin: 0 auto; }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* центрує картинки посередині */ }
   #portfolio-templates .row2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-    width: 80%;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
     -webkit-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     transform: translateY(-30px); }
   #portfolio-templates .row3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 64%;
-    margin: 0 auto;
     -webkit-transform: translateY(-60px);
     -ms-transform: translateY(-60px);
-    transform: translateY(-60px); }
+    transform: translateY(-60px);
+    /* початок секції з інформацією про ілюстратора */ }
 
 #about {
   background-color: #2EB398;
   width: 100%;
-  padding: 70px 130px; }
+  padding: 70px 130px 100px; }
   #about .person {
     position: relative;
     font-size: 14px; }
@@ -121,7 +99,8 @@ navbar {
       margin-bottom: 20px; }
     #about .person img {
       float: left;
-      margin-right: 35px; }
+      margin-right: 35px;
+      /* початок секції з формою для зв'язку */ }
 
 #getInTouch {
   background-color: #323232; }
@@ -161,7 +140,8 @@ navbar {
   color: #e6e6e6;
   padding: 70px 110px; }
   #getInTouch header {
-    padding-left: 10px; }
+    padding-left: 10px;
+    margin-bottom: 25px; }
   #getInTouch .contact-wrapper {
     position: relative;
     left: 50%;
@@ -174,6 +154,9 @@ navbar {
       margin-left: 40px;
       font-size: 12px;
       line-height: 24px; }
+      span.b {
+        font-weight: bold;
+        font-size: larger; }
     #getInTouch .contact-wrapper .adress {
       margin-top: 20px; }
       #getInTouch .contact-wrapper .adress span {

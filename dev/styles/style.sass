@@ -1,7 +1,9 @@
+@mixin center() 
+  display: flex
+  justify-content: center
+
+
 body
-  margin: 0
-  padding: 0
-  box-sizing: border-box
   font-family: 'Lato', sans-serif
 
 a
@@ -9,10 +11,6 @@ a
   &:hover
     text-decoration: none
     color: #307668
-  
-span.b
-  font-weight: bold
-  font-size: larger
   
 .cap
   text-transform: uppercase
@@ -24,13 +22,14 @@ navbar
   background-color: #323232
   position: fixed
   z-index: 999
+  
 .navbar-container
   height: 60px
   width: 100%
   position: relative
-  display: flex
-  justify-content: center
-  transform: translateX(3px)
+  @include center()
+  transform: translateX(3px) /* вирівнює шестикутник по центру */
+  
   .nav-hexstyle
     position: relative
     width: 180px
@@ -39,13 +38,13 @@ navbar
       position: absolute
       top: 130px
       left: 57px
-      img
+      img                    /* дає "підсвітку" картинки при наведенні мишки TODO - dropdown */
         opacity: 0.4
         &:hover
           opacity: 1.0
   .nav
     display: flex
-    flex-flow: row wrap
+    flex-flow: row nowrap
     align-self: center
     .nav-options
       padding-right: 15px
@@ -53,31 +52,26 @@ navbar
 
 #portfolio-templates
   position: relative
-  top: 60px
-  padding: 80px 0
-  .row1
-    display: flex
-    justify-content: space-around
-    width: 64%
-    margin: 0 auto
+  top: 60px            /* компенсує висоту фіксованої навігації */
+  padding: 60px 0      /* відступи до сусідніх секцій */
+  
+  img
+    margin: 0 10px   /* додає відступи між картинками */
+    
+  .row1, .row2, .row3
+    @include center()  /* центрує картинки посередині */
+
   .row2
-    display: flex
-    margin: 0 auto
-    width: 80%
-    justify-content: space-around
-    flex-flow: row nowrap
     transform: translateY(-30px)
+    
   .row3  
-    display: flex
-    justify-content: space-around
-    width: 64%
-    margin: 0 auto
     transform: translateY(-60px)
     
+    /* початок секції з інформацією про ілюстратора */
 #about
   background-color: #2EB398
   width: 100%
-  padding: 70px 130px
+  padding: 70px 130px 100px
   .person
     position: relative
     font-size: 14px
@@ -91,7 +85,8 @@ navbar
     img
       float: left
       margin-right: 35px
-      
+ 
+      /* початок секції з формою для зв'язку */
 #getInTouch
   background-color: #323232
   
@@ -131,21 +126,26 @@ navbar
   padding: 70px 110px
   header
     padding-left: 10px
+    margin-bottom: 25px
   .contact-wrapper
     position: relative
     left: 50%
-    transform: translateX(-50%)
+    transform: translateX(-50%) /* центрує текст відповідно до ширини браузера */
     .contacts
       width: 25%
       float: left
       margin-left: 40px
       font-size: 12px
       line-height: 24px
+      @at-root span.b /* робить жирним маленький спан на початку тексту */
+        font-weight: bold
+        font-size: larger
     .adress
       margin-top: 20px
       span
         color: #2EB398
         margin-right: 10px
+        
   
     .form-container
       font-size: 10px
@@ -164,10 +164,6 @@ navbar
           border-radius: 0
           &:hover
             background-color: #31efc8
-      
-  
-  
-  
   
   
 footer
