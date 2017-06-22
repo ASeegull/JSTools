@@ -1,0 +1,1 @@
+"use strict";!function(){document.querySelector("input[type=submit]").addEventListener("click",function(t){t.preventDefault()},!1),console.log("ta daaaam")}();

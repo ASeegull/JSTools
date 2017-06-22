@@ -6,7 +6,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat-css'),
   del = require('del'),
   copy = require('gulp-copy'),
-  destination = 'dist',
+  destination = 'docs',
   cssnano = require('gulp-cssnano'),
   jshint = require('gulp-jshint'),
   prefixer = require('gulp-autoprefixer'),
@@ -78,14 +78,14 @@ gulp.task('css-prod', function() {
   return gulp.src('dev/styles/*.css')
     .pipe(concat('style.css'))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist/styles'));
+    .pipe(gulp.dest('docs/styles'));
 })
 
 // gathers all js files (already babelified) to one file and minifies them 
 gulp.task('js-prod', () => {
   return gulp.src(['dev/scripts/*.js'])
     .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts'));
+    .pipe(gulp.dest('docs/scripts'));
 })
 
 
