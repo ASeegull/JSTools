@@ -12,8 +12,12 @@ a {
     text-decoration: none;
     color: #307668; }
 
+span.b {
+  font-weight: bold;
+  font-size: larger; }
+
 .cap {
-  text-transform: capitalize; }
+  text-transform: uppercase; }
 
 navbar {
   color: white;
@@ -44,6 +48,10 @@ navbar {
       position: absolute;
       top: 130px;
       left: 57px; }
+      .navbar-container .nav-hexstyle .arrow img {
+        opacity: 0.4; }
+        .navbar-container .nav-hexstyle .arrow img:hover {
+          opacity: 1.0; }
   .navbar-container .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -56,7 +64,6 @@ navbar {
     align-self: center; }
     .navbar-container .nav .nav-options {
       padding-right: 15px;
-      text-transform: uppercase;
       font-size: 12px; }
 
 #portfolio-templates {
@@ -101,23 +108,29 @@ navbar {
 #about {
   background-color: #2EB398;
   width: 100%;
-  padding: 70px 100px; }
+  padding: 70px 130px; }
   #about .person {
-    position: relative; }
+    position: relative;
+    font-size: 14px; }
     #about .person h2 {
-      color: #c4f4eb; }
+      color: #c4f4eb;
+      margin-bottom: 0; }
     #about .person h3 {
-      color: #15957b; }
+      margin-top: 0;
+      color: #15957b;
+      margin-bottom: 20px; }
     #about .person img {
       float: left;
-      margin-right: 20px; }
+      margin-right: 35px; }
 
 #getInTouch {
   background-color: #323232; }
 
 .sm-vidgets {
   font-size: 12px;
-  color: white; }
+  color: white;
+  float: right;
+  padding-top: 15px; }
   .sm-vidgets div {
     display: inline-block;
     text-align: center;
@@ -139,3 +152,52 @@ navbar {
 
 .sm-vidgets div:hover {
   background-color: rgba(40, 159, 135, 0.76); }
+  .sm-vidgets div:hover a:hover {
+    color: #f0faf8; }
+
+#getInTouch {
+  width: 100%;
+  background-color: #323232;
+  color: #e6e6e6;
+  padding: 70px 110px; }
+  #getInTouch header {
+    padding-left: 10px; }
+  #getInTouch .contact-wrapper {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    #getInTouch .contact-wrapper .contacts {
+      width: 25%;
+      float: left;
+      margin-left: 40px;
+      font-size: 12px;
+      line-height: 24px; }
+    #getInTouch .contact-wrapper .adress {
+      margin-top: 20px; }
+      #getInTouch .contact-wrapper .adress span {
+        color: #2EB398;
+        margin-right: 10px; }
+    #getInTouch .contact-wrapper .form-container {
+      font-size: 10px;
+      width: 65%;
+      float: left; }
+      #getInTouch .contact-wrapper .form-container input {
+        background-color: #c1bebe;
+        color: #323232;
+        width: 100%;
+        padding: 7px;
+        margin: 10px; }
+        #getInTouch .contact-wrapper .form-container input[type=submit] {
+          float: right;
+          width: 80px;
+          background-color: #15957b;
+          border-radius: 0; }
+          #getInTouch .contact-wrapper .form-container input[type=submit]:hover {
+            background-color: #31efc8; }
+
+footer {
+  background-color: #222222;
+  font-size: 13px;
+  padding-left: 40px; }

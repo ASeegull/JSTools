@@ -10,8 +10,12 @@ a
     text-decoration: none
     color: #307668
   
+span.b
+  font-weight: bold
+  font-size: larger
+  
 .cap
-  text-transform: capitalize
+  text-transform: uppercase
 
 navbar
   color: white
@@ -35,13 +39,16 @@ navbar
       position: absolute
       top: 130px
       left: 57px
+      img
+        opacity: 0.4
+        &:hover
+          opacity: 1.0
   .nav
     display: flex
     flex-flow: row wrap
     align-self: center
     .nav-options
       padding-right: 15px
-      text-transform: uppercase
       font-size: 12px
 
 #portfolio-templates
@@ -70,16 +77,20 @@ navbar
 #about
   background-color: #2EB398
   width: 100%
-  padding: 70px 100px
+  padding: 70px 130px
   .person
     position: relative
+    font-size: 14px
     h2
       color: #c4f4eb
+      margin-bottom: 0
     h3
+      margin-top: 0
       color: #15957b
+      margin-bottom: 20px
     img
       float: left
-      margin-right: 20px
+      margin-right: 35px
       
 #getInTouch
   background-color: #323232
@@ -87,6 +98,8 @@ navbar
 .sm-vidgets
   font-size: 12px
   color: white
+  float: right
+  padding-top: 15px
   div
     display: inline-block
     text-align: center
@@ -108,6 +121,59 @@ navbar
     
 .sm-vidgets div:hover
   background-color: rgba(40, 159, 135, 0.76)
+  a:hover
+    color: #f0faf8
+  
+#getInTouch
+  width: 100%
+  background-color: #323232
+  color: #e6e6e6
+  padding: 70px 110px
+  header
+    padding-left: 10px
+  .contact-wrapper
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    .contacts
+      width: 25%
+      float: left
+      margin-left: 40px
+      font-size: 12px
+      line-height: 24px
+    .adress
+      margin-top: 20px
+      span
+        color: #2EB398
+        margin-right: 10px
+  
+    .form-container
+      font-size: 10px
+      width: 65%
+      float: left
+      input
+        background-color: #c1bebe
+        color: #323232
+        width: 100%
+        padding: 7px
+        margin: 10px
+        &[type=submit]
+          float: right
+          width: 80px
+          background-color: #15957b
+          border-radius: 0
+          &:hover
+            background-color: #31efc8
+      
+  
+  
+  
+  
+  
+footer
+  background-color: #222222
+  font-size: 13px
+  padding-left: 40px
       
 @import 'glyphicon.css'
     
