@@ -10,7 +10,7 @@ JSTools
 >- initializes browser-sync
 
  this is default task, so just to check the page from *'dev'* directoty, use ***'gulp'***
-#### <i class="icon-upload"></i>***'gulp prod'*** 
+#### <i class="icon-upload"></i> ***'gulp prod'*** 
 
 >- deletes 'docs' directory (if exists), 
 >- copies images, fonts, 
