@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   browserSync = require('browser-sync').create(),
+  runSequence = require('run-sequence'),
   concat = require('gulp-concat-css'),
   del = require('del'),
   copy = require('gulp-copy'),
@@ -13,8 +14,9 @@ var gulp = require('gulp'),
   babel = require('gulp-babel'),
   uglify = require('gulp-uglify');
 
-
-// ----- dev-tasks
+//
+// -----------------------------------------------------------------------------
+// dev-tasks
 
 
 // compils sass to css and adds vendor prefixes 
@@ -54,7 +56,8 @@ gulp.task('browse', ['sass'], () => {
   browserSync.watch(['dev/*.html', 'dev/styles/*.css', 'scripts/*.js']).on('change', browserSync.reload);
 });
 
-
+//
+// -----------------------------------------------------------------------------
 // prepares files for release
 
 // cleans dir for release
@@ -91,4 +94,8 @@ gulp.task('js-prod', () => {
 
 gulp.task('default', ['browse']);
 //
-gulp.task('prod', ['del', 'copy', 'css-prod', 'js-prod']);
+//gulp.task('prod', ['del', 'copy', 'css-prod', 'js-prod']);
+
+gulp.task('prod', function() {
+  runSequence('del', ['css-prod', 'js-prod'], 'copy');
+});

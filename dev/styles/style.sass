@@ -28,7 +28,7 @@ navbar
   width: 100%
   position: relative
   @include center()
-  transform: translateX(3px) /* вирівнює шестикутник по центру */
+  transform: translateX(3px) /* cnetrs the nav hexagon */
   
   .nav-hexstyle
     position: relative
@@ -38,7 +38,7 @@ navbar
       position: absolute
       top: 130px
       left: 57px
-      img                    /* дає "підсвітку" картинки при наведенні мишки TODO - dropdown */
+      img                    /* highlights the arrow on nav hexagon on hover */
         opacity: 0.4
         &:hover
           opacity: 1.0
@@ -52,14 +52,14 @@ navbar
 
 #portfolio-templates
   position: relative
-  top: 60px            /* компенсує висоту фіксованої навігації */
-  padding: 60px 0      /* відступи до сусідніх секцій */
+  top: 60px            
+  padding: 60px 0    
   
   img
-    margin: 0 10px   /* додає відступи між картинками */
+    margin: 0 10px  
     
   .row1, .row2, .row3
-    @include center()  /* центрує картинки посередині */
+    @include center()
 
   .row2
     transform: translateY(-30px)
@@ -67,7 +67,7 @@ navbar
   .row3  
     transform: translateY(-60px)
     
-    /* початок секції з інформацією про ілюстратора */
+    /* info about illustrator: begin */
 #about
   background-color: #2EB398
   width: 100%
@@ -86,7 +86,7 @@ navbar
       float: left
       margin-right: 35px
  
-      /* початок секції з формою для зв'язку */
+      /* section with contact form */
 #getInTouch
   background-color: #323232
   
@@ -130,14 +130,14 @@ navbar
   .contact-wrapper
     position: relative
     left: 50%
-    transform: translateX(-50%) /* центрує текст відповідно до ширини браузера */
+    transform: translateX(-50%)
     .contacts
       width: 25%
       float: left
       margin-left: 40px
       font-size: 12px
       line-height: 24px
-      @at-root span.b /* робить жирним маленький спан на початку тексту */
+      @at-root span.b /* for a small span at the begiinig of the contacts */
         font-weight: bold
         font-size: larger
     .adress
